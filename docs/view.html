@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View | Public Webpages | Section 508 Pro</title>
+    <script src="assets/uswds/dist/js/uswds-init.min.js"></script>
+    <link rel="stylesheet" href="assets/uswds/dist/css/uswds.min.css" />
+
+    <script src="components/agency-nav/index.js"></script>
+    <script src="components/report-selectors/index.js"></script>
+    <script src="components/wcag-form/index.js"></script>
+    <script src="components/wcag-errors/index.js"></script>
+    <script src="components/lighthouse-errors/index.js"></script>
+    <script src="components/skyward-header/index.js"></script>
+    <script src="components/skyward-footer/index.js"></script>
+
+
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: black 1px solid;
+            border-collapse: collapse;
+            padding: 0.5em;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        summary>h3 {
+            display: inline-block;
+        }
+
+        summary>h4 {
+            display: inline-block;
+            text-indent: 2em;
+        }
+
+        summary>h5 {
+            display: inline-block;
+            text-indent: 4em;
+        }
+
+        .pass {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+
+        .na {
+            color: gray;
+        }
+
+        ul.wcag-state {
+            list-style-type: none;
+        }
+
+        ul.wcag-state>li {
+            display: "inline-block";
+            padding: 0;
+            font-weight: "bold";
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', init);
+
+        function init() {
+            syncReportSelector();
+            updateDateSelector();
+
+            window.addEventListener('newdata', updateWcagErrors);
+            window.addEventListener('newdata', updateLighthouseErrors);
+
+            let typeSelector = document.querySelector("#typeSelector");
+            typeSelector.addEventListener('change', typeChanged);
+
+            let dateSelector = document.querySelector("#dateSelector");
+            dateSelector.addEventListener('change', dateChanged);
+
+            let pageSelector = document.querySelector("#pageSelector");
+            pageSelector.addEventListener('change', pageChanged);
+
+            update(getQS("website"));
+        }
+
+        /**
+         * Get a value from the querystring
+         */
+        function getQS(key) {
+            const querystring = new URLSearchParams(document.location.search);
+            return querystring.get(key);
+        }
+
+        /**
+         * Make the reportSelector reflect the values in the querystring
+         */
+        function syncReportSelector() {
+            let typeSelector = document.querySelector("#typeSelector");
+            if (getQS("type") != null) {
+                typeSelector.value = getQS("type");
+            }
+
+            //updateDateSelector();
+            // which, in turn, updates pageSelector
+        }
+
+        /**
+         * Update report when typeSelector is changed (mobile | desktop)
+         */
+        function typeChanged(event) {
+            updateDateSelector();
+        }
+
+        /**
+         * Update report when dateSelector is changed (2023-08-15)
+         */
+        function dateChanged(event) {
+            updatePageSelector();
+        }
+
+        /**
+         * Update report when pageSelector is changed (/about)
+         */
+        function pageChanged(event) {
+            // update wcagErrors and lighthouseErrors for current page
+            let errorsUrl = `https://section508pro.github.io/508-${getQS("website")}-data/reports/${document.forms.reportSelector.typeSelector.value}/${document.forms.reportSelector.dateSelector.value}/reports/${document.forms.reportSelector.pageSelector.value}/a11y-errors.json`;
+            fetchJsonWithUrl("jsonA11yErrors", errorsUrl);
+
+        }
+
+
+        /**
+         * Update dateSelector based on value of typeSelector
+         */
+        function updateDateSelector() {
+            let datesUrl = `https://section508pro.github.io/508-${getQS("website")}-data/reports/${document.forms.reportSelector.typeSelector.value}/index.json`;
+            fetch(datesUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Problem fetching ${datesUrl}: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((json) => {
+                    // latest date first
+                    json.sort().reverse();
+
+                    // empty current dates
+                    let dateSelector = document.querySelector("#dateSelector");
+                    dateSelector.innerHTML = '';
+
+                    // add new dates
+                    json.forEach((dateString) => {
+                        let dateParts = dateString.split('/');
+                        let date = dateParts[2];
+                        let option = document.createElement('option');
+                        option.innerHTML = date;
+                        option.setAttribute("value", date);
+
+                        // select current date (if available)
+
+                        dateSelector.appendChild(option);
+                    });
+
+                    // update pages for new Dates
+                    updatePageSelector();
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+
+        /**
+         * Update pageSelector based on values of typeSelector and dateSelector
+         */
+        function updatePageSelector() {
+            let pagesUrl = `https://section508pro.github.io/508-${getQS("website")}-data/reports/${document.forms.reportSelector.typeSelector.value}/${document.forms.reportSelector.dateSelector.value}/ci-result.json`;
+            fetch(pagesUrl)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Problem fetching ${pagesUrl}: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((json) => {
+                    // empty current pages
+                    let pageSelector = document.querySelector("#pageSelector");
+                    pageSelector.innerHTML = '';
+
+                    // add new pages
+                    console.log(`New pages: ${json.length}`);
+                    json.forEach((page) => {
+                        let option = document.createElement('option');
+                        option.innerHTML = page.path;
+                        option.setAttribute("value", page.path);
+
+                        // select current page (if available)
+
+                        pageSelector.appendChild(option);
+                    });
+
+                    // update wcagErrors and lighthouseErrors for /
+                    let errorsUrl = `https://section508pro.github.io/508-${getQS("website")}-data/reports/${document.forms.reportSelector.typeSelector.value}/${document.forms.reportSelector.dateSelector.value}/reports/a11y-errors.json`;
+                    fetchJsonWithUrl("jsonA11yErrors", errorsUrl);
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+
+
+
+
+        /**
+         * Update wcagErrors when 'newdata' event is thrown
+         */
+        function updateWcagErrors(event) {
+            if (event.detail.key == "jsonA11yErrors") {
+                let table = document.querySelector(`#wcagErrorsTable`);
+
+                // reset tbody
+                let tbody = document.querySelector(`#wcagErrorsTable > tbody`);
+                tbody.remove();
+                tbody = document.createElement('tbody');
+                tbody.setAttribute('data-website', getQS('website'));
+
+                // populate data
+                let errors = event.detail.json;
+                let errorCount = 0;
+                errors.forEach((err) => {
+                    let wcags = lh2wcag(err.id);
+                    wcags.forEach((wcag) => {
+                        let tr = tbody.insertRow();
+                        let error = tr.insertCell();
+                        error.appendChild(document.createTextNode(wcag));
+                        let count = tr.insertCell();
+                        count.appendChild(document.createTextNode(err.errorCount));
+                        let rules = tr.insertCell();
+                        rules.appendChild(document.createTextNode(err.id));
+
+                        errorCount += err.errorCount;
+                    });
+                });
+                table.appendChild(tbody);
+
+                // update summary with errorCount          
+                let summary = document.querySelector(`#wcagErrorsSummary`);
+                summary.innerHTML = `<h3>Errors: ${errorCount}</h3>`;
+                if (errorCount > 0) {
+                    summary.classList.add('fail');
+                } else {
+                    summary.classList.add('pass');
+                }
+            }
+        }
+
+        /**
+         * Update lighthouseErrors when 'newdata' event is thrown
+         */
+        function updateLighthouseErrors(event) {
+            if (event.detail.key == "jsonA11yErrors") {
+                let table = document.querySelector(`#lighthouseErrorsTable`);
+
+                // reset tbody
+                let tbody = document.querySelector(`#lighthouseErrorsTable > tbody`);
+                tbody.remove();
+                tbody = document.createElement('tbody');
+                tbody.setAttribute('data-website', getQS('website'));
+
+                // populate data
+                let errors = event.detail.json;
+                let errorCount = 0;
+                errors.forEach((err) => {
+                    let tr = tbody.insertRow();
+                    let error = tr.insertCell();
+                    error.appendChild(document.createTextNode(err.id));
+                    let count = tr.insertCell();
+                    count.appendChild(document.createTextNode(err.errorCount));
+                    let rules = tr.insertCell();
+                    rules.appendChild(document.createTextNode(lh2wcag(err.id)));
+
+                    errorCount += err.errorCount;
+                });
+                table.appendChild(tbody);
+
+                // update summary with errorCount
+                let summary = document.querySelector(`#lighthouseErrorsSummary`);
+                summary.innerHTML = `<h3>Errors: ${errorCount}</h3>`;
+                if (errorCount > 0) {
+                    summary.classList.add('fail');
+                } else {
+                    summary.classList.add('pass');
+                }
+
+                // update iframe with lighthouse html report
+                let lighthouseHtml = document.querySelector("#lighthouse-html");
+                let lighthouseHtmlUrl = `https://section508pro.github.io/508-${getQS("website")}-data/reports/${document.forms.reportSelector.typeSelector.value}/${document.forms.reportSelector.dateSelector.value}/reports/${document.forms.reportSelector.pageSelector.value}/lighthouse.html`;
+                lighthouseHtml.src = lighthouseHtmlUrl;
+            }
+        }
+
+        /**
+         * Updates the page with new data
+         */
+        function update(website) {
+            fetchData();
+
+            let sidebarMenu = document.querySelector(`#${website}`);
+            if (sidebarMenu) {
+                // 1. show current on agency sidebar nav
+                sidebarMenu.classList.add("usa-current");
+
+                // 2. change main header
+                let header = document.querySelector("#main-header");
+                header.innerHTML = sidebarMenu.innerHTML;
+
+                // 3. load Lighthouse HTML report
+                let lighthouseHtml = document.querySelector("#lighthouse-html");
+                let details = getDetails();
+                lighthouseHtml.src = details.get("htmlLighthouse");
+
+            } else {
+                console.error(`No website found for website=${website}`);
+            }
+        }
+
+        /**
+         * Fetches all data need to update the page
+         */
+        async function fetchData() {
+            const details = getDetails();
+            console.log(details);
+
+            fetchJson("jsonAllPages");
+            fetchJson("jsonA11yErrors");
+        }
+
+        /**
+         * Returns parameters needed to update the data:
+         *  - Agency ("cns")
+         *  - Type ("mobile" | "desktop")
+         *  - Date ("2023-08-31")
+         *  - Page ("/about")
+         */
+        function getDetails() {
+            let details = new Map();
+
+            // agency
+            let website = getQS("website");
+            details.set("website", website);
+
+            // type
+            details.set("type", getQS("type") || "mobile");
+
+            // date
+            details.set("date", getQS("date") || "2023-08-08");
+
+            // webpage
+            details.set("webpage", getQS("webpage") || "/");
+
+            // baseUrl        
+            details.set("baseUrl", `https://section508pro.github.io/508-${website}-data`);
+
+            // dateUrl 
+            details.set("dateUrl", `${details.get("baseUrl")}/reports/${details.get("type")}/${details.get("date")}`);
+
+            // pageUrl
+            details.set("pageUrl", `${details.get("dateUrl")}/reports${details.get("webpage")}`);
+
+            // jsonAllPages
+            details.set("jsonAllPages", `${details.get("dateUrl")}/ci-result.json`);
+
+            // jsonErrorsSummaryLighthouse
+            details.set("jsonErrorsSummaryLighthouse", `${details.get("dateUrl")}/errors-summary-lighthouse.json`);
+
+            // jsonErrorsSummaryWcag
+            details.set("jsonErrorsSummaryWcag", `${details.get("dateUrl")}/errors-summary-wcag.json`);
+
+            // htmlLighthouse
+            details.set("htmlLighthouse", `${details.get("pageUrl")}/lighthouse.html`);
+
+            // jsonLighthouse
+            details.set("jsonLighthouse", `${details.get("pageUrl")}/lighthouse.json`);
+
+            // jsonA11y
+            details.set("jsonA11y", `${details.get("pageUrl")}/a11y.json`);
+
+            // jsonA11yErrors
+            details.set("jsonA11yErrors", `${details.get("pageUrl")}/a11y-errors.json`);
+
+            // jsonDates
+            details.set("jsonDates", `${details.get("dateUrl")}/index.json`);
+
+            return details;
+        }
+
+        /**
+         * Fetches remote json, throws "newdata" event
+         */
+        async function fetchJson(key) {
+            const details = getDetails();
+            fetch(details.get(key))
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Problem fetching ${key}: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((json) => {
+                    window.dispatchEvent(new CustomEvent("newdata", {
+                        detail: {
+                            key: key,
+                            json: json
+                        }
+                    }));
+                    return json;
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+
+        /**
+         * Fetches remote json, throws "newdata" event
+         * Also creates global variable with payload
+         */
+        async function fetchJsonWithUrl(key, url) {
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Problem fetching ${key} ${url}: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((json) => {
+                    let detail = {
+                        key: key,
+                        url: url,
+                        json: json
+                    };
+                    window.dispatchEvent(new CustomEvent("newdata", {
+                        detail: detail
+                    }));
+                    window[key] = detail;
+                    console.log(window[key]);
+                    return json;
+                })
+                .catch((err) => {
+                    console.error(err);
+                });
+        }
+
+
+
+        /**
+         * Returns WCAG SC (Success Criteria) for Lighthouse audit key
+         * Example: "link-name": ["2.4.4", "4.1.2"]
+         */
+        function lh2wcag(lhKey) {
+            const rules = {
+                "aria-allowed-attr": ["4.1.2"],
+                "aria-command-name": ["4.1.2"],
+                "aria-hidden-body": ["4.1.2"],
+                "aria-hidden-focus": ["1.3.1", "4.1.2"],
+                "aria-input-field-name": ["4.1.2"],
+                "aria-meter-name": ["1.1.1"],
+                "aria-progressbar-name": ["1.1.1"],
+                "aria-required-attr": ["4.1.2"],
+                "aria-required-children": ["1.3.1"],
+                "aria-required-parent": ["1.3.1"],
+                "aria-roles": ["4.1.2"],
+                "aria-toggle-field-name": ["4.1.2"],
+                "aria-tooltip-name": ["4.1.2"],
+                "aria-valid-attr-value": ["4.1.2"],
+                "aria-valid-attr": ["4.1.2"],
+                "button-name": ["4.1.2"],
+                "bypass": ["2.4.1"],
+                "color-contrast": ["1.4.3"],
+                "definition-list": ["1.3.1"],
+                "document-title": ["2.4.2"],
+                "duplicate-id-active": ["4.1.1"],
+                "duplicate-id-aria": ["4.1.1"],
+                "form-field-multiple-labels": ["3.3.2"],
+                "frame-title": ["2.4.1", "4.1.2"],
+                "html-has-lang": ["3.1.1"],
+                "html-lang-valid": ["3.1.1"],
+                "image-alt": ["1.1.1"],
+                "input-image-alt": ["1.1.1"],
+                "label": ["1.3.1", "4.1.2"],
+                "link-name": ["2.4.4", "4.1.2"],
+                "list": ["1.3.1"],
+                "listitem": ["1.3.1"],
+                "meta-refresh": ["2.2.1", "2.2.4", "3.2.5"],
+                "object-alt": ["1.1.1"],
+                "td-headers-attr": ["1.3.1"],
+                "valid-lang": ["3.1.2"],
+                "video-caption": ["1.2.2"]
+            };
+            return rules[lhKey] || [];
+        }
+    </script>
+</head>
+
+<body>
+
+    <skyward-header></skyward-header>
+    <!-- usa-section -->
+    <div class="usa-section">
+        <div class="grid-container-widescreen">
+            <div class="grid-row grid-gap">
+
+                <!-- sidebar navigation -->
+                <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+                    <nav aria-label="Secondary navigation">
+                        <ul class="usa-sidenav">
+                            <li class="usa-sidenav__item">
+                                <a href="public.html">Summary</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="history.html">History</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="agencies.html">Federal Agencies</a>
+                                <agency-nav></agency-nav>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <main class="
+            usa-layout-docs__main
+            desktop:grid-col-9
+            usa-prose usa-layout-docs
+          " id="main-content">
+                    <h1 id="main-header">View</h1>
+                    <report-selectors></report-selectors>
+                    <p class="usa-intro">
+                    </p>
+
+                    <div class="grid-container">
+                        <div class="grid-row">
+                            <div class="tablet:grid-col">
+                                <h2>WCAG</h2>
+                                <wcag-errors id="wcagErrors"></wcag-errors>
+                                <wcag-form></wcag-form>
+                            </div>
+
+                            <div class="tablet:grid-col">
+                                <h2>Lighthouse</h2>
+                                <lighthouse-errors id="lighthouseErrors"></lighthouse-errors>
+                                <iframe src="" id="lighthouse-html" width="100%" height="1000px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <skyward-footer></skyward-footer>
+
+    <script src="assets/uswds/dist/js/uswds.min.js"></script>
+</body>
+
+</html>

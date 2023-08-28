@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<script>
+    window.addEventListener('load', init);
+
+    function init() {
+        drawChart();
+    }
+
+    function drawChart() {
+        var data = {
+            // A labels array that can contain any sort of values
+            labels: ['8/1', '8/2', '8/7', '8/8', '8/9', '8/10'],
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                [406, 1017, 1009, 24974, 23395, 10188]
+            ]
+        };
+
+        let options = {
+            low: 0,
+            showArea: true
+        };
+
+        // Create a new line chart object where as first parameter we pass in a selector
+        // that is resolving to our chart container element. The Second parameter
+        // is the actual data object.
+        new Chartist.Line('.ct-chart', data, options);
+    }
+</script>
+<div class="ct-chart ct-perfect-fourth"></div>

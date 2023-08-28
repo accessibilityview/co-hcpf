@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencies | Public Webpages | Section 508 Pro</title>
+    <script src="assets/uswds/dist/js/uswds-init.min.js"></script>
+    <link rel="stylesheet" href="assets/uswds/dist/css/uswds.min.css" />
+
+    <script src="components/skyward-header/index.js"></script>
+    <script src="components/skyward-footer/index.js"></script>
+
+    <style>
+        td {
+            text-align: right;
+        }
+
+        th {
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', init);
+
+        function init() {
+        }
+
+    </script>
+</head>
+
+<body>
+    <skyward-header></skyward-header>
+
+    <!-- usa-section -->
+    <div class="usa-section">
+        <div class="grid-container">
+            <div class="grid-row grid-gap">
+
+                <!-- sidebar navigation -->
+                <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+                    <nav aria-label="Secondary navigation">
+                        <ul class="usa-sidenav">
+                            <li class="usa-sidenav__item">
+                                <a href="public.html">Summary</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="history.html">History</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="agencies.html" class="usa-current">Federal Agencies</a>
+                                <ul class="usa-sidenav__sublist">
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=cns" id="cns">CNS - Corporation for National and
+                                            Community Service (Americorps)</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=dhs" id="dhs">DHS - Department of Homeland
+                                            Security</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=doc" id="doc">DOC - Department of Commerce</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=doe" id="doe">DOE - Department of Energy</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=doi" id="doi">DOI - Department of the Interior</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=doj" id="doj">DOJ - Department of Justice</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=dol" id="dol">DOL - Department of Labor</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=dot" id="dot">DOT - Department of Transportation</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=ed" id="ed">ED - Department of Education</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=eeoc" id="eeoc">EEOC - Equal Employment Opportunity
+                                            Commission </a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=epa" id="epa">EPA - Environmental Protection
+                                            Agency</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=fcc" id="fcc">FCC - Federal Communications
+                                            Commission</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=fdic" id="fdic">FDIC - Federal Deposit Insurance
+                                            Corporation</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=gsa" id="gsa">GSA - General Services
+                                            Administration</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=hhs" id="hhs">HHS - Deparment of Health and Human
+                                            Services</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=hud" id="hud">HUD - Department of Housing and Urban
+                                            Development</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=nara" id="nara">NARA - National Archives and Records
+                                            Administration</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=ncua" id="ncua">NCUA - National Credit Union
+                                            Administration</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=nrc" id="nrc">NRC - US Nuclear Regulatory
+                                            Commission</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=nsf" id="nsf">NSF - National Science Foundation</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=opm" id="opm">OPM - Office of Personnel
+                                            Management</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=pbgc" id="pbgc">PBGC - Pension Benefit Guaranty
+                                            Corporation</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=sba" id="sba">SBA - Small Business Administration</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=sec" id="sec">SEC - Securities and Exchange
+                                            Commission</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=ssa" id="ssa">SSA - Social Security
+                                            Administration</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=state" id="state">State - Department of State</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=treasury" id="treasury">Treasury - Department of
+                                            Treasury</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=usab" id="usab">USAB - US Access Board</a>
+                                    </li>
+                                    <li class="usa-sidenav__item">
+                                        <a href="view.html?website=usaid" id="usaid">USAID - US Agency of International
+                                            Development</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <main class="
+            usa-layout-docs__main
+            desktop:grid-col-9
+            usa-prose usa-layout-docs
+          " id="main-content">
+                    <h1>Federal Agencies</h1>
+                    <p class="usa-intro">
+                        All US Federal agencies are legally required, by <a
+                            href="https://www.access-board.gov/law/ra.html#section-508-federal-electronic-and-information-technology">Section
+                            508 of the Rehabilitation Act</a>
+                        to provide accessible websites. When <a
+                            href="https://www.cdc.gov/ncbddd/disabilityandhealth/infographic-disability-impacts-all.html">1
+                            in 4 adults in the US have some type of disability</a>,
+                        the vital importance of this law becomes clear - a government "of the people, by the people, for
+                        the people" includes <b><i>all</i></b> people, including those with disabilities.
+                    </p>
+
+                    <p class="usa-intro">
+                        On August 8th, 2023 we visited 8,724 federal web pages. We found 66,512 accessibility errors on
+                        those pages.
+                    </p>
+
+                    <p>
+                    <table>
+                        <tr>
+                            <th>Federal Agency</th>
+                            <th>Pages Audited</th>
+                            <th>Accessibility Errors</th>
+                        </tr>
+                        <tr>
+                            <td>CNS</td>
+                            <td>400</td>
+                            <td>2,094</td>
+                        </tr>
+                        <tr>
+                            <td>DHS</td>
+                            <td>398</td>
+                            <td>1,850</td>
+                        </tr>
+                        <tr>
+                            <td>DOC</td>
+                            <td>398</td>
+                            <td>1,548</td>
+                        </tr>
+                        <tr>
+                            <td>DOE</td>
+                            <td>400</td>
+                            <td>25,298</td>
+                        </tr>
+                        <tr>
+                            <td>DOI</td>
+                            <td>380</td>
+                            <td>1,650</td>
+                        </tr>
+                        <tr>
+                            <td>DOJ</td>
+                            <td>88</td>
+                            <td>784</td>
+                        </tr>
+                        <tr>
+                            <td>DOL</td>
+                            <td>396</td>
+                            <td>822</td>
+                        </tr>
+                        <tr>
+                            <td>DOT</td>
+                            <td>385</td>
+                            <td>8,954</td>
+                        </tr>
+                        <tr>
+                            <td>ED</td>
+                            <td>66</td>
+                            <td>376</td>
+                        </tr>
+                        <tr>
+                            <td>EEOC</td>
+                            <td>400</td>
+                            <td>410</td>
+                        </tr>
+                        <tr>
+                            <td>EPA</td>
+                            <td>380</td>
+                            <td>418</td>
+                        </tr>
+                        <tr>
+                            <td>FCC</td>
+                            <td>400</td>
+                            <td>4,202</td>
+                        </tr>
+                        <tr>
+                            <td>FDIC</td>
+                            <td>120</td>
+                            <td>158</td>
+                        </tr>
+                        <tr>
+                            <td>GSA</td>
+                            <td>400</td>
+                            <td>170</td>
+                        </tr>
+                        <tr>
+                            <td>HHS</td>
+                            <td>400</td>
+                            <td>4,018</td>
+                        </tr>
+                        <tr>
+                            <td>HUD</td>
+                            <td>387</td>
+                            <td>1,170</td>
+                        </tr>
+                        <tr>
+                            <td>NARA</td>
+                            <td>393</td>
+                            <td>3,100</td>
+                        </tr>
+                        <tr>
+                            <td>NRC</td>
+                            <td>282</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td>NSF</td>
+                            <td>71</td>
+                            <td>792</td>
+                        </tr>
+                        <tr>
+                            <td>OPM</td>
+                            <td>207</td>
+                            <td>1,790</td>
+                        </tr>
+                        <tr>
+                            <td>PBGC</td>
+                            <td>398</td>
+                            <td>3,162</td>
+                        </tr>
+                        <tr>
+                            <td>SBA</td>
+                            <td>387</td>
+                            <td>180</td>
+                        </tr>
+                        <tr>
+                            <td>SSA</td>
+                            <td>289</td>
+                            <td>718</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>399</td>
+                            <td>22</td>
+                        </tr>
+                        <tr>
+                            <td>Treasury</td>
+                            <td>400</td>
+                            <td>466</td>
+                        </tr>
+                        <tr>
+                            <td>USAB</td>
+                            <td>299</td>
+                            <td>700</td>
+                        </tr>
+                        <tr>
+                            <td>USAID</td>
+                            <td>201</td>
+                            <td>1,204</td>
+                        </tr>
+                    </table>
+                    </p>
+
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <skyward-footer></skyward-footer>
+
+    <script src="assets/uswds/dist/js/uswds.min.js"></script>
+</body>
+
+</html>

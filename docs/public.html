@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Webpages | Section 508 Pro</title>
+    <script src="assets/uswds/dist/js/uswds-init.min.js"></script>
+    <link rel="stylesheet" href="assets/uswds/dist/css/uswds.min.css" />
+
+    <script src="components/skyward-header/index.js"></script>
+    <script src="components/skyward-footer/index.js"></script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 0.5em;
+        }
+    </style>
+
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <!-- olli -->
+    <script src="https://cdn.jsdelivr.net/npm/olli@1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/olli-adapters@1"></script>
+
+    <script>
+        window.addEventListener("load", init);
+
+        function init() {
+            addChart();
+        }
+
+        function addChart() {
+            var yourVlSpec = {
+                $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
+                width: 500,
+                height: 454,
+                description: 'A donut chart showing WCAG Errors',
+                title: "WCAG Errors",
+                data: { "url": "wcag-errors.json" },
+                "mark": { "type": "arc", "innerRadius": 50, "tooltip": true },
+                "encoding": {
+                    "theta": { "field": "value", "type": "quantitative" },
+                    "color": { "field": "category", "type": "nominal" }
+                }
+            };
+            vegaEmbed('#chart', yourVlSpec);
+
+            // code to render the olli treeview
+            OlliAdapters.VegaLiteAdapter(yourVlSpec).then(olliVisSpec => {
+                const olliRender = olli(olliVisSpec);
+                // document.getElementById("olli-container").append(olliRender);
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <skyward-header></skyward-header>
+    <!-- usa-section -->
+    <div class="usa-section">
+        <div class="grid-container">
+            <div class="grid-row grid-gap">
+
+                <!-- sidebar navigation -->
+                <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+                    <nav aria-label="Secondary navigation">
+                        <ul class="usa-sidenav">
+                            <li class="usa-sidenav__item">
+                                <a href="public.html" class="usa-current">Summary</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="history.html">History</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="agencies.html">Federal Agencies</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <main class="
+                            usa-layout-docs__main
+                            desktop:grid-col-9
+                            usa-prose usa-layout-docs
+                        " id="main-content">
+                    <h1>Public Webpages</h1>
+                    <p class="usa-intro">
+                        On August 8th, 2023 we visited 8,724 federal web pages. We found 66,512 accessibility errors on
+                        those pages.
+                    </p>
+
+                    <div id="chart-container">
+                        <div id="chart"></div>
+                    </div>
+
+                    <div id="olli-container"></div>
+
+                    <div id="chart-table">
+                        <table>
+                            <tr>
+                                <th>WCAG Success Criteria</th>
+                                <th>Errors</th>
+                                <th>Learn More</th>
+                            </tr>
+                            <tr>
+                                <td>1.3.1 Info and Relationships</td>
+                                <td>32,516</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding
+                                        1.3.1</a></td>
+                            </tr>
+                            <tr>
+                                <td>4.1.2 Name, Role, Value</td>
+                                <td>15,570</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html">Understanding
+                                        4.1.2</a></td>
+                            </tr>
+                            <tr>
+                                <td>1.4.3 Contrast (Minimum)</td>
+                                <td>10,386</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">Understanding
+                                        1.4.3</a></td>
+                            </tr>
+                            <tr>
+                                <td>2.4.4 Link Purpose (In Context)</td>
+                                <td>3,136</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html">Understanding
+                                        2.4.4</a></td>
+                            </tr>
+                            <tr>
+                                <td>1.1.1 Non-text Content</td>
+                                <td>1,896</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">Understanding
+                                        1.1.1</a></td>
+                            </tr>
+                            <tr>
+                                <td>4.1.1 Parsing</td>
+                                <td>1,526</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/parsing.html">Understanding
+                                        4.1.1</a></td>
+                            </tr>
+                            <tr>
+                                <td>2.4.1 Bypass Blocks</td>
+                                <td>1,326</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html">Understanding
+                                        2.4.1</a></td>
+                            </tr>
+                            <tr>
+                                <td>3.1.1 Language of Page</td>
+                                <td>152</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html">Understanding
+                                        3.1.1</a></td>
+                            </tr>
+                            <tr>
+                                <td>2.4.2 Page Titled</td>
+                                <td>4</td>
+                                <td><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">Understanding
+                                        2.4.2</a></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <skyward-footer></skyward-footer>
+
+    <script src="assets/uswds/dist/js/uswds.min.js"></script>
+</body>
+
+</html>

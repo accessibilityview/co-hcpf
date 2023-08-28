@@ -1,0 +1,52 @@
+[
+    {
+        "date": "2023-08-08",
+        "lighthouseErrorCount": 83980,
+        "wcagErrorCount": 66512
+    },
+    {
+        "date": "2023-08-09",
+        "lighthouseErrorCount": 82214,
+        "wcagErrorCount": 61702
+    },
+    {
+        "date": "2023-08-10",
+        "lighthouseErrorCount": 85471,
+        "wcagErrorCount": 66561
+    },
+    {
+        "date": "2023-08-11",
+        "lighthouseErrorCount": 80010,
+        "wcagErrorCount": 63282
+    },
+    {
+        "date": "2023-08-12",
+        "lighthouseErrorCount": 81322,
+        "wcagErrorCount": 61866
+    },
+    {
+        "date": "2023-08-15",
+        "lighthouseErrorCount": 83156,
+        "wcagErrorCount": 64840
+    },
+    {
+        "date": "2023-08-13",
+        "lighthouseErrorCount": 81860,
+        "wcagErrorCount": 62468
+    },
+    {
+        "date": "2023-08-16",
+        "lighthouseErrorCount": 83490,
+        "wcagErrorCount": 66146
+    },
+    {
+        "date": "2023-08-17",
+        "lighthouseErrorCount": 91212,
+        "wcagErrorCount": 70358
+    },
+    {
+        "date": "2023-08-14",
+        "lighthouseErrorCount": 85636,
+        "wcagErrorCount": 67050
+    }
+]

@@ -1,0 +1,19 @@
+{
+    "name": "co-hcpf",
+    "version": "0.1.0",
+    "description": "Accessibility View for CO-HCPF",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "rollup": "node rollup.js",
+        "testm": "TODAY=$(date \"+%Y-%m-%d\"); unlighthouse-ci --site https://hcpf.colorado.gov/ --mobile  --output-path reports/mobile/$TODAY ",
+        "testd": "TODAY=$(date \"+%Y-%m-%d\"); unlighthouse-ci --site https://hcpf.colorado.gov/ --desktop --output-path reports/desktop/$TODAY ",
+        "summary": "node summary.js",
+        "test": "npm run testm; npm run testd; npm run summary"
+    },
+    "author": "Scott Davis <scott@thirstyhead.com> (https://thirstyhead.com/)",
+    "license": "CC-BY-4.0",
+    "dependencies": {
+        "walker": "^1.0.8"
+    }
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "heading-order",
+    "title": "Heading elements are not in a sequentially-descending order",
+    "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-169-H3",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,1,DIV,0,H3",
+            "selector": "div > div.field > div.leftbox > h3",
+            "boundingRect": {
+              "top": 372,
+              "bottom": 425,
+              "left": 15,
+              "right": 1335,
+              "width": 1320,
+              "height": 53
+            },
+            "snippet": "<h3>",
+            "nodeLabel": "Provider Network Map",
+            "explanation": "Fix any of the following:\n  Heading order invalid"
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "moderate",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ]
+      }
+    },
+    "errorCount": 1
+  }
+]

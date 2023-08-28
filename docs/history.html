@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Public Webpages | Section 508 Pro</title>
+    <script src="assets/uswds/dist/js/uswds-init.min.js"></script>
+    <link rel="stylesheet" href="assets/uswds/dist/css/uswds.min.css" />
+
+    <script src="components/skyward-header/index.js"></script>
+    <script src="components/skyward-footer/index.js"></script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 0.5em;
+        }
+
+        td {
+            text-align: right;
+        }
+
+        #chart,
+        #chart-table {
+            display: "inline-block";
+        }
+    </style>
+
+    <!-- chart -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <script>
+        window.addEventListener("load", init);
+
+        function init() {
+            addChart();
+        }
+
+        function addChart() {
+            var yourVlSpec = {
+                "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                width: 500,
+                height: 454,
+                "data": { "url": "errors-summary.json" },
+                "mark": {
+                    "type": "area",
+                    "line": {
+                        "color": "darkred"
+                    },
+                    "color": {
+                        "x1": 1,
+                        "y1": 1,
+                        "x2": 1,
+                        "y2": 0,
+                        "gradient": "linear",
+                        "stops": [
+                            {
+                                "offset": 0,
+                                "color": "red"
+                            },
+                            {
+                                "offset": 1,
+                                "color": "red"
+                            }
+                        ]
+                    },
+                    "tooltip": true
+                },
+                "encoding": {
+                    "x": { "timeUnit": "binnedutcyearmonthdate", "field": "date", "type": "temporal", "title": "Date" },
+                    "y": { "aggregate": "sum", "field": "wcagErrorCount", "title": "WCAG Errors" }
+                }
+            };
+            vegaEmbed('#chart', yourVlSpec);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <skyward-header></skyward-header>
+
+    <!-- usa-section -->
+    <div class="usa-section">
+        <div class="grid-container">
+            <div class="grid-row grid-gap">
+
+                <!-- sidebar navigation -->
+                <div class="usa-layout-docs__sidenav desktop:grid-col-3">
+                    <nav aria-label="Secondary navigation">
+                        <ul class="usa-sidenav">
+                            <li class="usa-sidenav__item">
+                                <a href="public.html">Summary</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="history.html" class="usa-current">History</a>
+                            </li>
+                            <li class="usa-sidenav__item">
+                                <a href="agencies.html">Federal Agencies</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+
+                <main class="
+            usa-layout-docs__main
+            desktop:grid-col-9
+            usa-prose usa-layout-docs
+          " id="main-content">
+                    <h1>History</h1>
+                    <p class="usa-intro">
+                        On August 8th, 2023 we visited 8,724 federal web pages. We found 66,512 accessibility errors on
+                        those pages.
+                    </p>
+
+                    <div id="chart"></div>
+
+                    <div id="chart-table">
+                        <table>
+                            <tr>
+                                <th>Date</th>
+                                <th>Pages Audited</th>
+                                <th>WCAG Errors</th>
+                            </tr>
+                            <tr>
+                                <td>2023-08-08</td>
+                                <td>8,724</td>
+                                <td>66,512</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-09</td>
+                                <td>7,737</td>
+                                <td>61,702</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-10</td>
+                                <td>8,792</td>
+                                <td>66,561</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-11</td>
+                                <td>7,811</td>
+                                <td>63,282</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-12</td>
+                                <td>7,835</td>
+                                <td>61,866</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-13</td>
+                                <td>8,190</td>
+                                <td>62,468</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-14</td>
+                                <td>8,158</td>
+                                <td>67,050</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-15</td>
+                                <td>8,034</td>
+                                <td>64,840</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-16</td>
+                                <td>8,650</td>
+                                <td>66,146</td>
+                            </tr>
+                            <tr>
+                                <td>2023-08-17</td>
+                                <td>9,110</td>
+                                <td>70,358</td>
+                            </tr>
+                        </table>
+
+
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <skyward-footer></skyward-footer>
+    <script src="assets/uswds/dist/js/uswds.min.js"></script>
+</body>
+
+</html>
