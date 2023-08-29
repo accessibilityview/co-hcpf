@@ -1,0 +1,296 @@
+[
+  {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "description": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-65-FONT",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,3,P,0,STRONG,0,FONT",
+            "selector": "div.field > p > strong > font",
+            "boundingRect": {
+              "top": 439,
+              "bottom": 458,
+              "left": 15,
+              "right": 870,
+              "width": 855,
+              "height": 19
+            },
+            "snippet": "<font color=\"red\">",
+            "nodeLabel": "In the Provider Web Portal, claims will deny if not logged into the correct acc…",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "13-66-MAIN",
+                  "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN",
+                  "selector": "div.site-wrapper > div.dialog-off-canvas-main-canvas > div#xyBackground > main#main-content",
+                  "boundingRect": {
+                    "top": 193,
+                    "bottom": 5227,
+                    "left": 0,
+                    "right": 1350,
+                    "width": 1350,
+                    "height": 5034
+                  },
+                  "snippet": "<main id=\"main-content\" tabindex=\"-1\" class=\"main-container container js-quickedit-main-content\">",
+                  "nodeLabel": "Home  For Our Providers  Provider Resources  Quick Guides  Provider Web Portal …"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-67-FONT",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,5,P,0,STRONG,0,FONT",
+            "selector": "div.field > p > strong > font",
+            "boundingRect": {
+              "top": 535,
+              "bottom": 554,
+              "left": 15,
+              "right": 1327,
+              "width": 1312,
+              "height": 19
+            },
+            "snippet": "<font color=\"red\">",
+            "nodeLabel": "Nursing facility claims need to be billed from the nursing facility account, an…",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "13-66-MAIN",
+                  "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN",
+                  "selector": "div.site-wrapper > div.dialog-off-canvas-main-canvas > div#xyBackground > main#main-content",
+                  "boundingRect": {
+                    "top": 193,
+                    "bottom": 5227,
+                    "left": 0,
+                    "right": 1350,
+                    "width": 1350,
+                    "height": 5034
+                  },
+                  "snippet": "<main id=\"main-content\" tabindex=\"-1\" class=\"main-container container js-quickedit-main-content\">",
+                  "nodeLabel": "Home  For Our Providers  Provider Resources  Quick Guides  Provider Web Portal …"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-68-FONT",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,7,OL,0,LI,1,FONT",
+            "selector": "div.field > ol > li > font",
+            "boundingRect": {
+              "top": 631,
+              "bottom": 650,
+              "left": 377,
+              "right": 521,
+              "width": 144,
+              "height": 19
+            },
+            "snippet": "<font color=\"red\">",
+            "nodeLabel": "(Not as a Delegate).",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "13-66-MAIN",
+                  "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN",
+                  "selector": "div.site-wrapper > div.dialog-off-canvas-main-canvas > div#xyBackground > main#main-content",
+                  "boundingRect": {
+                    "top": 193,
+                    "bottom": 5227,
+                    "left": 0,
+                    "right": 1350,
+                    "width": 1350,
+                    "height": 5034
+                  },
+                  "snippet": "<main id=\"main-content\" tabindex=\"-1\" class=\"main-container container js-quickedit-main-content\">",
+                  "nodeLabel": "Home  For Our Providers  Provider Resources  Quick Guides  Provider Web Portal …"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-69-FONT",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,7,OL,1,LI,2,FONT",
+            "selector": "div.field > ol > li > font",
+            "boundingRect": {
+              "top": 1098,
+              "bottom": 1117,
+              "left": 55,
+              "right": 794,
+              "width": 739,
+              "height": 19
+            },
+            "snippet": "<font color=\"red\">",
+            "nodeLabel": "Being able to register for the Web Portal is NOT an indicator that the correct …",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "13-66-MAIN",
+                  "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN",
+                  "selector": "div.site-wrapper > div.dialog-off-canvas-main-canvas > div#xyBackground > main#main-content",
+                  "boundingRect": {
+                    "top": 193,
+                    "bottom": 5227,
+                    "left": 0,
+                    "right": 1350,
+                    "width": 1350,
+                    "height": 5034
+                  },
+                  "snippet": "<main id=\"main-content\" tabindex=\"-1\" class=\"main-container container js-quickedit-main-content\">",
+                  "nodeLabel": "Home  For Our Providers  Provider Resources  Quick Guides  Provider Web Portal …"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-70-FONT",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,7,OL,4,LI,1,P,1,STRONG,0,FONT",
+            "selector": "li > p > strong > font",
+            "boundingRect": {
+              "top": 2500,
+              "bottom": 2519,
+              "left": 483,
+              "right": 1031,
+              "width": 548,
+              "height": 19
+            },
+            "snippet": "<font color=\"red\">",
+            "nodeLabel": "When logged into this account, only submit claims for this provider type.",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.99 (foreground color: #ff0000, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "13-66-MAIN",
+                  "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN",
+                  "selector": "div.site-wrapper > div.dialog-off-canvas-main-canvas > div#xyBackground > main#main-content",
+                  "boundingRect": {
+                    "top": 193,
+                    "bottom": 5227,
+                    "left": 0,
+                    "right": 1350,
+                    "width": 1350,
+                    "height": 5034
+                  },
+                  "snippet": "<main id=\"main-content\" tabindex=\"-1\" class=\"main-container container js-quickedit-main-content\">",
+                  "nodeLabel": "Home  For Our Providers  Provider Resources  Quick Guides  Provider Web Portal …"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143"
+        ]
+      }
+    },
+    "errorCount": 5
+  },
+  {
+    "id": "heading-order",
+    "title": "Heading elements are not in a sequentially-descending order",
+    "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "13-71-H3",
+            "path": "1,HTML,1,BODY,0,DIV,1,DIV,5,DIV,0,MAIN,0,DIV,2,DIV,0,SECTION,1,DIV,0,ARTICLE,1,DIV,0,DIV,8,H3",
+            "selector": "article.page > div > div.field > h3",
+            "boundingRect": {
+              "top": 5127,
+              "bottom": 5179,
+              "left": 15,
+              "right": 1335,
+              "width": 1320,
+              "height": 53
+            },
+            "snippet": "<h3>",
+            "nodeLabel": "Need More Help?",
+            "explanation": "Fix any of the following:\n  Heading order invalid"
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "moderate",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ]
+      }
+    },
+    "errorCount": 1
+  }
+]

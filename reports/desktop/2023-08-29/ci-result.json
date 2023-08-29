@@ -1,0 +1,798 @@
+[
+  {
+    "path": "/",
+    "score": 0.94
+  },
+  {
+    "path": "/2003-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2004-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2005-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2006-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2007-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2009-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2010-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2011-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2012-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2013-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2014-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2015-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2016-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2017-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2018-agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/2018-memo-series-communications",
+    "score": 0.98
+  },
+  {
+    "path": "/2019-memo-series-communications",
+    "score": 0.98
+  },
+  {
+    "path": "/2020-memo-series-communications",
+    "score": 0.98
+  },
+  {
+    "path": "/2021-memo-series-communication",
+    "score": 0.98
+  },
+  {
+    "path": "/2022-memo-series-communication",
+    "score": 0.98
+  },
+  {
+    "path": "/2022-report-to-community",
+    "score": 0.97
+  },
+  {
+    "path": "/2023-memo-series-communication",
+    "score": 0.98
+  },
+  {
+    "path": "/340b-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/about-us",
+    "score": 0.96
+  },
+  {
+    "path": "/acc-phase-iii-stakeholder-engagement",
+    "score": 0.98
+  },
+  {
+    "path": "/access-to-care",
+    "score": 0.98
+  },
+  {
+    "path": "/accessibility-statement",
+    "score": 0.98
+  },
+  {
+    "path": "/accountable-care-collaborative-deliverables",
+    "score": 0.98
+  },
+  {
+    "path": "/accountable-care-collaborative-phase-ii-member-messaging-resource-center",
+    "score": 0.98
+  },
+  {
+    "path": "/accountable-care-collaborative-phase-ii-provider-and-stakeholder-resource-center",
+    "score": 0.98
+  },
+  {
+    "path": "/accountable-care-collaborative-program-improvement-advisory-committee",
+    "score": 0.97
+  },
+  {
+    "path": "/accountable-care-collaborative-public-reporting",
+    "score": 0.98
+  },
+  {
+    "path": "/accphase2",
+    "score": 0.98
+  },
+  {
+    "path": "/accphase3",
+    "score": 0.98
+  },
+  {
+    "path": "/add-new-npi",
+    "score": 0.97
+  },
+  {
+    "path": "/admin-password-reset",
+    "score": 0.98
+  },
+  {
+    "path": "/affordability",
+    "score": 0.96
+  },
+  {
+    "path": "/agency-and-director-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/agency-letters",
+    "score": 0.98
+  },
+  {
+    "path": "/alert",
+    "score": 0.98
+  },
+  {
+    "path": "/alternative-care-facilities",
+    "score": 0.98
+  },
+  {
+    "path": "/alternative-payment-model-1-apm-1",
+    "score": 0.98
+  },
+  {
+    "path": "/alternative-payment-model-2-apm-2",
+    "score": 0.98
+  },
+  {
+    "path": "/americans-disabilities-act",
+    "score": 0.98
+  },
+  {
+    "path": "/analysis-emergency-department-utilization",
+    "score": 0.98
+  },
+  {
+    "path": "/annual-technical-reports",
+    "score": 0.98
+  },
+  {
+    "path": "/appeals",
+    "score": 0.96
+  },
+  {
+    "path": "/application-assistance-sites",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/arpa-grant-opportunities",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/arpa-stakeholder-engagement",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/arpa-stakeholder-engagement/plan",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/news-article/a-focus-on-the-workforce-arpa",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/news-article/arpa-stakeholder-spotlight-april-2022",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/news-article/arpa-stakeholder-spotlight-mar-2022",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/news-article/community-first-choice-arpa",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/news-article/PACE",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/newsletter",
+    "score": 0.95
+  },
+  {
+    "path": "/arpa/project-directory",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/project-directory/expand-emergency-preparedness",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/project-directory/improve-access-for-underserved-populations",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/project-directory/improve-access-for-underserved-populations/equity-study",
+    "score": 0.98
+  },
+  {
+    "path": "/arpa/project-directory/improve-crisis-and-acute-services",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/project-directory/strengthen-case-management-redesign",
+    "score": 0.96
+  },
+  {
+    "path": "/arpa/project-directory/workforce-and-rural-sustainability",
+    "score": 0.96
+  },
+  {
+    "path": "/asc-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/audiology-0",
+    "score": 0.98
+  },
+  {
+    "path": "/audiology-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/audit-findings-mind-springs-health",
+    "score": 0.97
+  },
+  {
+    "path": "/audits",
+    "score": 0.98
+  },
+  {
+    "path": "/aviso-de-derechos-de-discapacidad",
+    "score": 0.98
+  },
+  {
+    "path": "/backdating-enrollment",
+    "score": 0.98
+  },
+  {
+    "path": "/be-aware-of-scams",
+    "score": 0.98
+  },
+  {
+    "path": "/become-a-provider",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-ffs",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-and-integration-strategies-subcommittee",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-ffs-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-hospital-engagement-forum",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-independent-provider-network-collaborative",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-rate-reform",
+    "score": 0.98
+  },
+  {
+    "path": "/behavioral-health-services",
+    "score": 0.98
+  },
+  {
+    "path": "/benefit-plan-acronyms",
+    "score": 0.98
+  },
+  {
+    "path": "/benefits-utilization-system-bus-updates",
+    "score": 0.97
+  },
+  {
+    "path": "/bho-quality-plans-and-annual-evaluations",
+    "score": 0.98
+  },
+  {
+    "path": "/bhreform",
+    "score": 0.98
+  },
+  {
+    "path": "/BHST-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/BICMHSEBD-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/bidm-procurement",
+    "score": 0.98
+  },
+  {
+    "path": "/billing-from-correct-account",
+    "score": 0.97
+  },
+  {
+    "path": "/billing-manuals",
+    "score": 0.98
+  },
+  {
+    "path": "/bills-to-improve-long-term-care-signed-into-law",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apa",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apb",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apc",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apd",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apf",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apg",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-api",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apo",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apx",
+    "score": 0.98
+  },
+  {
+    "path": "/bima-apz",
+    "score": 0.98
+  },
+  {
+    "path": "/birthequity",
+    "score": 0.98
+  },
+  {
+    "path": "/BPR-FAQ",
+    "score": 0.98
+  },
+  {
+    "path": "/brain-injury-waiver-bi",
+    "score": 0.98
+  },
+  {
+    "path": "/brand",
+    "score": 0.96
+  },
+  {
+    "path": "/brandrequestform",
+    "score": 0.98
+  },
+  {
+    "path": "/breast-and-cervical-cancer-program-bccp",
+    "score": 0.98
+  },
+  {
+    "path": "/bridge-training",
+    "score": 0.98
+  },
+  {
+    "path": "/budget",
+    "score": 0.98
+  },
+  {
+    "path": "/budget/other-budget-requests/FY2021-22SupplementalsFY2022-23BudgetAmendments",
+    "score": 0.98
+  },
+  {
+    "path": "/bulletins",
+    "score": 0.98
+  },
+  {
+    "path": "/bundled-payments",
+    "score": 0.98
+  },
+  {
+    "path": "/bus-issues",
+    "score": 0.98
+  },
+  {
+    "path": "/bus-resources",
+    "score": 0.98
+  },
+  {
+    "path": "/bus-third-party-user-access-tracker",
+    "score": 0.98
+  },
+  {
+    "path": "/bus-update-memos-and-newsletters",
+    "score": 0.98
+  },
+  {
+    "path": "/business-process-re-engineering",
+    "score": 0.98
+  },
+  {
+    "path": "/business-process-reengineering-project",
+    "score": 0.98
+  },
+  {
+    "path": "/buy-in-program-working-adults-disabilities",
+    "score": 0.98
+  },
+  {
+    "path": "/canadian-drug-importation-plan",
+    "score": 0.97
+  },
+  {
+    "path": "/care-case-management",
+    "score": 0.98
+  },
+  {
+    "path": "/care-case-management-faq",
+    "score": 0.98
+  },
+  {
+    "path": "/care-case-management-system",
+    "score": 0.98
+  },
+  {
+    "path": "/careers-hcpf",
+    "score": 0.98
+  },
+  {
+    "path": "/case-management-agency-resources",
+    "score": 0.98
+  },
+  {
+    "path": "/case-management-redesign",
+    "score": 0.96
+  },
+  {
+    "path": "/case-management-redesign-timeline-text-only",
+    "score": 0.98
+  },
+  {
+    "path": "/case-management-redesign/case-management-redesign-timeline",
+    "score": 0.91
+  },
+  {
+    "path": "/ccm-contacts",
+    "score": 0.98
+  },
+  {
+    "path": "/ccm-ki",
+    "score": 0.98
+  },
+  {
+    "path": "/ccm-system-training",
+    "score": 0.98
+  },
+  {
+    "path": "/cct-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/ccu",
+    "score": 0.98
+  },
+  {
+    "path": "/ccu-reports",
+    "score": 0.97
+  },
+  {
+    "path": "/certified-community-behavioral-health-clinics-ccbhc-grant",
+    "score": 0.96
+  },
+  {
+    "path": "/change-ownership-app",
+    "score": 0.97
+  },
+  {
+    "path": "/chase-hospital-cost-analysis",
+    "score": 0.98
+  },
+  {
+    "path": "/CHCBS-CLLI-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/child-health-plan-plus",
+    "score": 0.98
+  },
+  {
+    "path": "/child-health-plan-plus-dental-care",
+    "score": 0.96
+  },
+  {
+    "path": "/child-health-plan-plus-managed-care-contracts",
+    "score": 0.97
+  },
+  {
+    "path": "/child-health-plan-plus-prenatal-waiver",
+    "score": 0.98
+  },
+  {
+    "path": "/child-health-plan-plus-state-managed-care",
+    "score": 0.96
+  },
+  {
+    "path": "/children-life-limiting-illness-waiver-clli",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-dental-benefits",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-disability-advisory-committee",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-extensive-support-waiver-ces",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-habilitation-residential-program-waiver-chrp",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-home-and-community-based-services-waiver-chcbs",
+    "score": 0.98
+  },
+  {
+    "path": "/childrens-services-steering-committee",
+    "score": 0.98
+  },
+  {
+    "path": "/chrp-billing-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/chrp-FAQ",
+    "score": 0.98
+  },
+  {
+    "path": "/cicp",
+    "score": 0.97
+  },
+  {
+    "path": "/cicp-provider-faqs",
+    "score": 0.98
+  },
+  {
+    "path": "/cih-faq",
+    "score": 0.98
+  },
+  {
+    "path": "/cih-provider-list",
+    "score": 0.98
+  },
+  {
+    "path": "/citizenship-and-identity-requirements-deficit-reduction-act",
+    "score": 0.98
+  },
+  {
+    "path": "/claimsxten",
+    "score": 0.98
+  },
+  {
+    "path": "/client-satisfaction-surveys-cahps",
+    "score": 0.98
+  },
+  {
+    "path": "/cmes-procurement",
+    "score": 0.98
+  },
+  {
+    "path": "/cms-and-colorados-joint-budget-committee-approve-530-million-arpa-funds-to-transform",
+    "score": 0.98
+  },
+  {
+    "path": "/co-pay-information-providers",
+    "score": 0.98
+  },
+  {
+    "path": "/coloradans-maintained-coverage",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-cost-shift-analysis",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-dental-health-care-program-low-income-seniors",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-dental-health-care-program-low-income-seniors-0",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-division-insurance-and-department-health-care-policy-financing-release-expected",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-foundations-partner-state-support-providers",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-healthcare-affordability-and-sustainability-enterprise-chase-board",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-healthcare-affordability-and-sustainability-enterprise-chase-information-providers",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-hospital-discounted-care",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-hospital-prices",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-hospital-profits-among-nations-highest-for-third-consecutive-year",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-hospital-transformation-program",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-hospital-transformation-program-101",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-indigent-care-program",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-indigent-care-program-stakeholder-advisory-council",
+    "score": 0.98
+  },
+  {
+    "path": "/colorado-indigent-care-program-subrogation-policy",
+    "score": 0.98
+  },
+  {
+    "path": "/DMEPOS-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/Fact-Sheet-for-PE",
+    "score": 0.98
+  },
+  {
+    "path": "/FY-2023-24-Budget-Request-Behavioral-Health-Exhibits",
+    "score": 0.98
+  },
+  {
+    "path": "/FY2023-24-Childrens-Basic-Health-Plan-Exhibits",
+    "score": 0.98
+  },
+  {
+    "path": "/HCBA-FAQs",
+    "score": 0.98
+  },
+  {
+    "path": "/Hospital-Discounted-Care-Rates",
+    "score": 0.98
+  },
+  {
+    "path": "/IDD-Services-enrollments-waitlists",
+    "score": 0.98
+  },
+  {
+    "path": "/IHRP",
+    "score": 0.98
+  },
+  {
+    "path": "/IHS-billing-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/InnovAge-PACE-enrollment-moratorium",
+    "score": 0.98
+  },
+  {
+    "path": "/IPN_Contact_Info",
+    "score": 0.93
+  },
+  {
+    "path": "/IRSS-inspections-program",
+    "score": 0.97
+  },
+  {
+    "path": "/JBC-Hearing-FY2018-19-Office-of-Community-Living",
+    "score": 0.98
+  },
+  {
+    "path": "/OB-manual",
+    "score": 0.98
+  },
+  {
+    "path": "/OCL-stakeholder-engagement",
+    "score": 0.98
+  },
+  {
+    "path": "/OCL-stakeholder-engagement/OCL-newsletter-archive",
+    "score": 0.98
+  },
+  {
+    "path": "/OLD-ensuring-full-continuum-sud-benefits",
+    "score": 0.94
+  },
+  {
+    "path": "/PCF-FAQs",
+    "score": 0.98
+  },
+  {
+    "path": "/SLS-wavier-exception-review-process",
+    "score": 0.98
+  },
+  {
+    "path": "/Third-Value-Based-Pharmaceutical-Contract",
+    "score": 0.98
+  }
+]
