@@ -1,0 +1,14 @@
+[
+  {
+    "agency": "co-hcpf",
+    "date": "2023-08-29",
+    "lighthouseErrorCount": 530,
+    "wcagErrorCount": 28
+  },
+  {
+    "agency": "co-hcpf",
+    "date": "2023-08-28",
+    "lighthouseErrorCount": 364,
+    "wcagErrorCount": 14
+  }
+]
